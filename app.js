@@ -11,12 +11,11 @@ const increaseNumber = () => {
 const reduceNumber = () => {
   numberParElem = +numberShowElem.innerText;
   numberParElem--;
-  numberShowElem.textContent = `${numberParElem}`;
-
   if (numberParElem < 0) {
     numberParElem += 1;
-    numberShowElem.textContent = `${numberParElem}`;
+    return numberParElem;
   }
+  numberShowElem.textContent = `${numberParElem}`;
 };
 
 btnNextElem.addEventListener("click", increaseNumber);
